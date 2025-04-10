@@ -1,20 +1,23 @@
-Create a simple String calculator with a method signature like this:
+# String Calculator - Machine Test
 
-int add(string numbers)
-Input: a string of comma-separated numbers
-Output: an integer, sum of the numbers
-Examples:
+This repository contains a simple JavaScript function `add(string)` that evaluates a string of numbers and returns their sum. It supports various delimiters, newlines, and error handling for negative numbers.
 
-Input: “”, Output: 0
-Input: “1”, Output: 1
-Input: “1,5”, Output: 6
-Allow the add method to handle any amount of numbers.
+## ✅ Features
 
-Allow the add method to handle new lines between numbers (instead of commas). ("1\n2,3" should return 6)
+- Returns `0` for empty input
+- Handles:
+  - Single number (e.g. `"1"` → `1`)
+  - Comma-separated numbers (e.g. `"1,2"` → `3`)
+  - Newline-separated values (e.g. `"1\n2,3"` → `6`)
+- Supports custom single-character delimiters using syntax like `//;\n1;2`
+- Throws an error for negative numbers and lists them all
 
-Support different delimiters:
+## 🚀 How to Run
 
-To change the delimiter, the beginning of the string will contain a separate line that looks like this: "//[delimiter]\n[numbers…]". For example, "//;\n1;2" where the delimiter is ";" should return 3.
-Calling add with a negative number will throw an exception: "negative numbers not allowed <negative_number>".
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/string-calculator.git
+   cd string-calculator
 
-If there are multiple negative numbers, show all of them in the exception message, separated by commas.
+## 🚀 Run the js file with node command
+   node string_calculator.js
